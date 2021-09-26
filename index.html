@@ -1,6 +1,6 @@
 <!-- tag que especifica o tipo de documento como html -->
 <!DOCTYPE html>
-<!-- Raiz da pagina e cabeçalho -->
+<!-- Raiz da página html e cabeçalho -->
 <html lang="pt-br">
 <head>
 <!-- codifica os caracteres como UTF-8 -->
@@ -22,7 +22,7 @@
 
   // define função validaCPF()
   function validaCPF() {
-    // define validacao com o padrão  em expressão regular do cpf
+    // define validacaoCPF com o padrão  em expressão regular do cpf
     const validacaoCPF = /^[0-9]{11}$/;
     // o método getElementById retorna para a variável o valor do campo cpf através do ID
     const cpf = document.getElementById('cpf').value;
@@ -39,7 +39,7 @@
   function validaCEP() {
     // método getElementById para retornar o valor do campo CEP
     const cep = document.getElementById('cep').value;
-        // condicional que verifica se o campo cep possui 8 dígitos
+        // condicional que verifica se o campo cep possui pelo menos 8 dígitos
     if (cep.length != 8) {
       alert("O CEP digitado é inválido.");
     }
@@ -61,7 +61,7 @@
 
 </script>
 </head>
-<!-- corpo da pagina -->
+<!-- corpo da página -->
 <body>
 
 <!-- elementos div para secionar a página, sem os atributos css no momento -->
