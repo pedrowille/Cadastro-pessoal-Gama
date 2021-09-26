@@ -1,0 +1,183 @@
+<!-- tag que especifica o tipo de documento como html -->
+<!DOCTYPE html>
+<!-- Raiz da pagina e cabeçalho -->
+<html lang="pt-br">
+<head>
+<!-- codifica os caracteres como UTF-8 -->
+<meta charset="UTF-8">
+<title> Formulário de cadastro pessoal </title>
+<!-- elemento javascript -->
+<script type="text/javascript">
+  // define função validaNome()
+  function validaNome() {
+    // const que armazena uma expressão regular que procura por números digitados no campo nome através do método test()
+    const validacaoNome = /\d/;
+    // o método getElementById armazena na variável o valor atual do campo nome através do ID
+    const nome = document.getElementById('nome').value;
+        // condicional que verifica se existem números no campo nome
+    if (validacaoNome.test(nome)) {
+      alert("O campo nome deve conter apenas letras.");
+    }
+  }
+
+  // define função validaCPF()
+  function validaCPF() {
+    // define validacao com o padrão  em expressão regular do cpf
+    const validacaoCPF = /^[0-9]{11}$/;
+    // o método getElementById retorna para a variável o valor do campo cpf através do ID
+    const cpf = document.getElementById('cpf').value;
+        // condicional que verifica se o padrão descrito em validacaoCPF confere com o CPF inserido pelo usuário
+    if (validacaoCPF.test(cpf)) {
+      alert("O CPF digitado é válido.");
+    }
+    else {
+      alert("O CPF digitado é inválido!");
+    }
+
+  }
+  // define a função validaCEP()
+  function validaCEP() {
+    // método getElementById para retornar o valor do campo CEP
+    const cep = document.getElementById('cep').value;
+        // condicional que verifica se o campo cep possui 8 dígitos
+    if (cep.length != 8) {
+      alert("O CEP digitado é inválido.");
+    }
+  }
+  // define função validaCelular()
+  function validaCelular() {
+    // define o padrão em expressão regular do celular
+    const validacaoCelular = /^[0-9]{9}$/;
+    const celular = document.getElementById('celular').value;
+        // verifica se o padrão é válido
+    if (validacaoCelular.test(celular)) {
+      alert("O celular digitado é válido.");
+    }
+    else {
+      alert("O celular digitado é inválido!");
+    }
+
+  }
+
+</script>
+</head>
+<!-- corpo da pagina -->
+<body>
+
+<!-- elementos div para secionar a página, sem os atributos css no momento -->
+<div>
+  <h1> Formulário de cadastro pessoal</h1>
+</div>
+<!-- adiciona um separador para distinguir o formulário -->
+<hr>
+<!-- Instruções sobre o preenchimento dos campos -->
+<div>
+  <p> Preencha com seus dados o formulário abaixo. Os campos marcados com um * (asterisco) são obrigatórios.</p>
+</div>
+<!-- início do formulário indicado pela tag <form>, o atributo onsubmit indica ao javascript uma condicional que exibe uma confirmação ao usuário -->
+<form action="submit.html" method="post" onsubmit="if (!confirm('Tem certeza de que deseja enviar os dados do cadastro?')){return false;}">
+  <div  >
+    <!-- o   elemento label rotula os campos do formulário, o atributo for identifica o campo referido -->
+    <label for="nome">Nome completo *<br/></label>
+        <!-- input do tipo texto, o atributo id cria um identificador para o campo, o atributo placeholder é uma dica de preenchimento, required indica que ele não pode estar vazio -->
+    <input type="text" id="nome" placeholder="Digite seu nome completo" onchange="validaNome()" required>
+  </div>
+  <div>
+    <label for="cpf">CPF *<br/></label>
+    <!-- o atributo maxlength indica a quantidade máxima de caracteres inseríveis no campo CPF -->
+    <!-- o atributo pattern seleciona caracteres em uma string utilizando padrões de expressões regulares. {11} indica o intervalo, são aceitos dígitos entre 0 e 9 -->
+    <!-- onChange é o atributo que indica o evento gatilho que chama a função validaCPF() -->    
+    <input type="number" id="cpf" placeholder="Digite seu CPF" pattern="[0-9]{11}" maxlength="11" onChange="validaCPF()" required>
+  </div>
+  <div>
+    <label for="rg">RG<br/></label>
+    <input type="number" id="rg" placeholder="Digite seu RG" maxlength="14">
+  </div>
+  <div>
+    <label for="sexo">Selecione seu sexo<br/></label>
+    <!-- o elemento select permite selecionar entre as opções -->
+    <select id="sexo">
+    <!-- a tag option cria um elemento selecionável identificável pelo atributo value -->
+      <option value="m">Masculino</option>
+      <option value="f">Feminino</option>
+      <option value="o">Outro</option>
+  </select>
+  </div>
+  <div>
+      <label for="endereco">Endereço *<br/></label>
+    <input type="text" id="endereco" placeholder="Digite seu endereço" required>
+  </div>
+  <div>
+    <label for="numero">Número *<br/></label>
+    <input type="number" id="numero" maxlength="5" placeholder="Digite o número da residência (ou bloco de apartamentos)" required>
+  </div>
+  <div>
+    <label for="complemento">Complemento<br/></label>
+    <input type="text" id="complemento" placeholder="Insira um complemento (Exemplo: apartamento 88)">
+  </div>
+  <div>
+    <label for="Bairro">Bairro *<br/></label>
+    <input type="text" id="bairro" placeholder="Digite seu bairro" required>
+  </div>
+  <div>
+    <label for="cidade">Cidade *<br/></label>
+    <input type="text" id="cidade" placeholder="Digite sua cidade" required>
+  </div>
+    <div>
+          <label for="estado">Estado *<br/></label>
+    <select id="estado" name="estado">
+    <option value="AC">Acre</option>
+    <option value="AL">Alagoas</option>
+    <option value="AP">Amapá</option>
+    <option value="AM">Amazonas</option>
+    <option value="BA">Bahia</option>
+    <option value="CE">Ceará</option>
+    <option value="DF">Distrito Federal</option>
+    <option value="ES">Espírito Santo</option>
+    <option value="GO">Goiás</option>
+    <option value="MA">Maranhão</option>
+    <option value="MT">Mato Grosso</option>
+    <option value="MS">Mato Grosso do Sul</option>
+    <option value="MG">Minas Gerais</option>
+    <option value="PA">Pará</option>
+    <option value="PB">Paraíba</option>
+    <option value="PR">Paraná</option>
+    <option value="PE">Pernambuco</option>
+    <option value="PI">Piauí</option>
+    <option value="RJ">Rio de Janeiro</option>
+    <option value="RN">Rio Grande do Norte</option>
+    <option value="RS">Rio Grande do Sul</option>
+    <option value="RO">Rondônia</option>
+    <option value="RR">Roraima</option>
+    <option value="SC">Santa Catarina</option>
+    <option value="SP">São Paulo</option>
+    <option value="SE">Sergipe</option>
+    <option value="TO">Tocantins</option>
+    </select>
+  </div>
+  <div>
+        <label for="cep">CEP<br/></label>
+    <!-- o atributo pattern valida a entrada do usuário caso sejam inseridos números de 0 a 9 nos 8 caracteres do CEP, onChange chama a função validaCEP() -->
+        <input type="number" id="cep" placeholder="Digite seu CEP" pattern="[0-9]{8}" maxlength="8" onChange="validaCEP()">
+  </div>
+  <div>
+    <label for="fixo">Telefone fixo<br/></label>
+    <input type="number" maxlength="11" id="fixo" placeholder="Digite o número do seu telefone fixo">
+  </div>
+  <div>
+    <label for="dddcelular">DDD do celular *<br/></label>    
+    <input type="number" id="dddcelular" maxlength="2" required>
+  </div>
+  <div>
+    <label for="celular">Telefone celular *<br/></label> 
+    <input type="number" id="celular" placeholder="Digite seu celular (apenas números)" maxlength="9" onChange="validaCelular()" required>
+  </div>
+
+  <div>
+    <!-- cria um botão do tipo submit -->
+    <input type="submit" id="submit" value="Cadastrar">
+  </div>
+</form>
+</div>
+</body>
+</html>
