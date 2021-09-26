@@ -8,7 +8,7 @@ Aplicação simples que recebe dados cadastrais do usuário
   + Validação dos itens de preenchimento obrigatórios Nome, CPF e telefone celular (utilizando Regex);
   + Validação do campo CEP caso preenchido;
   + Campos select para seleção de sexo e estado;
-  + Confirma ao submeter o formulário;
+  + Solicita confirmação ao submeter o formulário;
     + Página de sucesso ao concluir o cadastro
   + Hospedado com Netlify, disponível em: https://form-gama.netlify.app/
 
