@@ -10,7 +10,8 @@ Aplicação simples que recebe dados cadastrais do usuário
   + Campos select para seleção de sexo e estado;
   + Solicita confirmação ao submeter o formulário;
     + Página de sucesso ao concluir o cadastro
-  + Hospedado com Netlify, disponível em: https://form-gama.netlify.app/
+
+Hospedado com Netlify no endereço: https://form-gama.netlify.app/
 
 
 ## Referências:
