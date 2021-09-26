@@ -18,5 +18,7 @@ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expression
 https://developer.mozilla.org/pt-BR/docs/Web/API/Document/getElementById
 https://qastack.com.br/programming/6515502/javascript-form-submit-confirm-or-cancel-submission-dialog-box
 (https://dev.to/melvin2016/how-to-check-if-a-string-contains-at-least-one-number-using-regular-expression-regex-in-javascript-3n5h)
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/length
+https://devaprender.com/como-hospedar-um-site-gratuitamente-com-netlify/
 https://gist.github.com/quagliato/9282728
