@@ -91,11 +91,11 @@
     <!-- o atributo maxlength indica a quantidade máxima de caracteres inseríveis no campo CPF -->
     <!-- o atributo pattern seleciona caracteres em uma string utilizando padrões de expressões regulares. {11} indica o intervalo, são aceitos dígitos entre 0 e 9 -->
     <!-- onChange é o atributo que indica o evento gatilho que chama a função validaCPF() -->    
-    <input type="number" id="cpf" placeholder="Digite seu CPF" pattern="[0-9]{11}" maxlength="11" onChange="validaCPF()" required>
+    <input type="number" id="cpf" placeholder="Digite seu CPF" pattern="[0-9]{11}" onChange="validaCPF()" required>
   </div>
   <div>
     <label for="rg">RG<br/></label>
-    <input type="number" id="rg" placeholder="Digite seu RG" maxlength="14">
+    <input type="number" id="rg" placeholder="Digite seu RG">
   </div>
   <div>
     <label for="sexo">Selecione seu sexo<br/></label>
@@ -113,7 +113,7 @@
   </div>
   <div>
     <label for="numero">Número *<br/></label>
-    <input type="number" id="numero" maxlength="5" placeholder="Digite o número da residência (ou bloco de apartamentos)" required>
+    <input type="number" id="numero" placeholder="Digite o número da residência (ou bloco de apartamentos)" required>
   </div>
   <div>
     <label for="complemento">Complemento<br/></label>
@@ -129,7 +129,7 @@
   </div>
     <div>
           <label for="estado">Estado *<br/></label>
-    <select id="estado" name="estado">
+    <select id="estado" name="estado" required>
     <option value="AC">Acre</option>
     <option value="AL">Alagoas</option>
     <option value="AP">Amapá</option>
@@ -162,19 +162,19 @@
   <div>
         <label for="cep">CEP<br/></label>
     <!-- o atributo pattern valida a entrada do usuário caso sejam inseridos números de 0 a 9 nos 8 caracteres do CEP, onChange chama a função validaCEP() -->
-        <input type="number" id="cep" placeholder="Digite seu CEP" pattern="[0-9]{8}" maxlength="8" onChange="validaCEP()">
+        <input type="number" id="cep" placeholder="Digite seu CEP" pattern="[0-9]{8}" onChange="validaCEP()">
   </div>
   <div>
     <label for="fixo">Telefone fixo<br/></label>
-    <input type="number" maxlength="11" id="fixo" placeholder="Digite o número do seu telefone fixo">
+    <input type="number" id="fixo" placeholder="Digite o número do seu telefone fixo">
   </div>
   <div>
     <label for="dddcelular">DDD do celular *<br/></label>    
-    <input type="number" id="dddcelular" maxlength="2" required>
+    <input type="number" id="dddcelular" required>
   </div>
   <div>
     <label for="celular">Telefone celular *<br/></label> 
-    <input type="number" id="celular" placeholder="Digite seu celular (apenas números)" maxlength="9" onChange="validaCelular()" required>
+    <input type="number" id="celular" placeholder="Digite seu celular (apenas números)" onChange="validaCelular()" required>
   </div>
 
   <div>
