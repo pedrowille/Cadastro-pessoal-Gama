@@ -12,6 +12,7 @@ Aplicação simples que recebe dados cadastrais do usuário
     + Página de sucesso ao concluir o cadastro
   + Hospedado com Netlify, disponível em: https://form-gama.netlify.app/
 
+
 ## Referências:
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions
 https://developer.mozilla.org/pt-BR/docs/Web/API/Document/getElementById
