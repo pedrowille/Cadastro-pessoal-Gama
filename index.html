@@ -79,7 +79,8 @@
   <p> Preencha com seus dados o formulário abaixo. Os campos marcados com um * (asterisco) são obrigatórios.</p>
 </div>
 <!-- início do formulário indicado pela tag <form>, o atributo onsubmit indica ao javascript uma condicional que exibe uma confirmação ao usuário -->
-<form action="submit.html" method="post" onsubmit="if (!confirm('Tem certeza de que deseja enviar os dados do cadastro?')){return false;}">
+<!-- atributo data-netlify para identificar o formulário no serviço de hospedagem netlify -->
+  <form action="submit.html" method="post" name="cadastro" data-netlify="true" onsubmit="if (!confirm('Tem certeza de que deseja enviar os dados do cadastro?')){return false;}">
   <div  >
     <!-- o   elemento label rotula os campos do formulário, o atributo for identifica o campo referido -->
     <label for="nome">Nome completo *<br/></label>
