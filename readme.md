@@ -5,7 +5,7 @@ Aplicação simples que recebe dados cadastrais do usuário
 # Funcionalidades
   + Formulário de cadastro com campos Nome completo, CPF, RG, Sexo, Endereço, CEP, telefone fixo e telefone celular;
   + Campos obrigatórios e opcionais de acordo com a regra de negócio;
-  + Validação dos itens de preenchimento obrigatórios Nome, CPF e telefone celular (utilizando Regex);
+  + Validação dos itens de preenchimento obrigatórios Nome, Endereço, CPF e telefone celular (utilizando Regex);
   + Validação do campo CEP caso preenchido;
   + Campos select para seleção de sexo e estado;
   + Solicita confirmação ao submeter o formulário;
